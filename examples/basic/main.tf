@@ -20,7 +20,6 @@ module "dynamodb" {
 
   project_name = var.project_name
   enable_pitr  = var.enable_pitr
-  ttl_days     = var.ttl_days
 }
 
 # S3 Buckets for KB data and vectors

@@ -70,12 +70,6 @@ variable "enable_pitr" {
   default     = false
 }
 
-variable "ttl_days" {
-  description = "Number of days before TTL expires items"
-  type        = number
-  default     = 30
-}
-
 # API Gateway Configuration
 variable "api_stage_name" {
   description = "API Gateway stage name"

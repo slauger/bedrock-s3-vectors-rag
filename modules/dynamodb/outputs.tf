@@ -27,3 +27,12 @@ output "analytics_table_arn" {
   description = "ARN of the analytics DynamoDB table"
   value       = aws_dynamodb_table.analytics.arn
 }
+
+output "table_arns" {
+  description = "List of all DynamoDB table ARNs"
+  value = [
+    aws_dynamodb_table.sessions.arn,
+    aws_dynamodb_table.messages.arn,
+    aws_dynamodb_table.analytics.arn
+  ]
+}

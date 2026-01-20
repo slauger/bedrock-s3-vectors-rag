@@ -214,7 +214,6 @@ module "dynamodb" {
 
   project_name = "my-chatbot"
   enable_pitr  = true
-  ttl_days     = 30
 }
 ```
 
