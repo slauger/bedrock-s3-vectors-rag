@@ -1,0 +1,34 @@
+# Example Terraform variables - copy to terraform.tfvars and customize
+
+# Basic Configuration
+project_name = "my-chatbot"
+aws_region   = "us-east-1"
+
+# Bedrock Configuration
+bedrock_model_id    = "anthropic.claude-3-5-sonnet-20241022-v2:0"
+bedrock_embed_model = "amazon.titan-embed-text-v2:0"
+
+# S3 Vectors Configuration
+s3_vectors_index_name = "kb-index"
+kb_version            = "1.0.0"
+
+# Lambda Configuration
+lambda_timeout     = 30
+lambda_memory_size = 512
+log_level          = "INFO"
+log_retention_days = 30
+
+# DynamoDB Configuration
+enable_pitr = false
+ttl_days    = 30
+
+# API Gateway Configuration
+api_stage_name    = "prod"
+cors_allow_origin = "'*'"  # Change to your domain in production
+api_burst_limit   = 20
+api_rate_limit    = 10
+api_quota_limit   = 10000
+
+# Monitoring Configuration (optional)
+enable_monitoring = false
+# alarm_email     = "ops@example.com"
