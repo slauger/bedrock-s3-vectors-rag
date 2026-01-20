@@ -46,12 +46,6 @@ variable "dynamodb_table_arns" {
   type        = list(string)
 }
 
-variable "aws_region" {
-  description = "AWS Region"
-  type        = string
-  default     = "eu-central-1"
-}
-
 variable "timeout" {
   description = "Lambda timeout in seconds"
   type        = number

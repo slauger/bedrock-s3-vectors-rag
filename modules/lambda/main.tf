@@ -1,5 +1,20 @@
 # Lambda Function für Chatbot Handler (ZIP-based deployment)
 
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
+    archive = {
+      source  = "hashicorp/archive"
+      version = ">= 2.0"
+    }
+  }
+}
+
 # Package Lambda function source code
 data "archive_file" "lambda_zip" {
   count       = var.use_container_image ? 0 : 1

@@ -1,3 +1,14 @@
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
+  }
+}
+
 # IAM User for GitHub Actions
 resource "aws_iam_user" "github_actions" {
   name = "${var.project_name}-github-actions"

@@ -8,9 +8,3 @@ variable "enable_pitr" {
   type        = bool
   default     = false
 }
-
-variable "ttl_days" {
-  description = "Number of days before TTL expires items"
-  type        = number
-  default     = 30
-}

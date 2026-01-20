@@ -1,5 +1,16 @@
 # CloudWatch Monitoring & Alarms
 
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
+  }
+}
+
 # SNS Topic für Alarm Notifications
 resource "aws_sns_topic" "alarms" {
   name = "${var.project_name}-alarms"

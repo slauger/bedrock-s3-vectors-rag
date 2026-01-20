@@ -1,5 +1,16 @@
 # DynamoDB Tables für Chatbot
 
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
+  }
+}
+
 # Sessions Table - Tracks user sessions
 resource "aws_dynamodb_table" "sessions" {
   name         = "${var.project_name}-sessions"

@@ -13,7 +13,7 @@ Terraform modules for deploying a production-ready RAG (Retrieval-Augmented Gene
 
 ## What is S3 Vectors?
 
-S3 Vectors is AWS's managed vector search capability (launched late 2024) that enables semantic search directly on S3 buckets. Key benefits:
+S3 Vectors is AWS's managed vector search capability (launched late 2025) that enables semantic search directly on S3 buckets. Key benefits:
 
 - No separate vector database infrastructure
 - Integrated with S3 storage

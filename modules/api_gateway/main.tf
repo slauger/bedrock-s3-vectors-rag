@@ -1,5 +1,16 @@
 # API Gateway REST API für Chatbot
 
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
+  }
+}
+
 resource "aws_api_gateway_rest_api" "chatbot_api" {
   name        = "${var.project_name}-api"
   description = "API Gateway for AI Chatbot"

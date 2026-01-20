@@ -1,5 +1,16 @@
 # S3 Bucket für Bedrock Knowledge Base Daten
 
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
+  }
+}
+
 locals {
   kb_bucket_name     = var.kb_data_bucket_name != "" ? var.kb_data_bucket_name : "${var.project_name}-kb-data"
   vector_bucket_name = var.vector_bucket_name != "" ? var.vector_bucket_name : "${var.project_name}-vector-bucket"
